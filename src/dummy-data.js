@@ -54,6 +54,36 @@ const dummyData = [
             },
         ],
     },
+    {
+        id: 3,
+        username: "Uniloki",
+        thumbnailUrl: 'https://icon2.cleanpng.com/20180320/sqe/kisspng-twitch-computer-icons-streaming-media-youtube-live-tv-twitch-icon-5ab19172461392.001176751521586546287.jpg',
+        imageUrl: 'https://specials-images.forbesimg.com/imageserve/1152308114/960x0.jpg?fit=scale',
+        likes: 1337,
+        timestamp: "July 15th 2017, 03:12:09 pm",
+        comments: [
+            {
+                id: 40,
+                username: "twitch",
+                text: "What flavor is that?",
+            },
+            {
+                id: 41,
+                username: "michaelmarzetta",
+                text: "Looking good!",
+            },
+            {
+                id: 42,
+                username: "themexican_leprechaun",
+                text: "I hate coffee",
+            },
+            {
+                id: 43,
+                username: "dennis_futbol",
+                text: "Wow",
+            },
+        ],
+    },
 ];
 
 export default dummyData;
