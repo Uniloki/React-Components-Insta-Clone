@@ -15,9 +15,14 @@ import data from "./dummy-data";
 
 const App = () => {
   const [posts, setPost] = useState(data);
+  const [search, setSearch] = useState('');
   // Create a state called 'posts' to hold the list of posts, initializing to dummyData.
   // To make the search bar work (which is stretch) we'd need another state to hold the search term.
-
+  const filteredPost = posts.filter(pst => {
+    return pst.username.toLowerCase().includes( search.toLowerCase() )
+  })
+  console.log(filteredPost);
+  console.log(posts)
   const likePost = postId => {
     setPost(posts.map(pst => {
       if (posts.id === postId){
@@ -36,8 +41,8 @@ const App = () => {
   return (
     <div className="App">
       {/* Add SearchBar and Posts here to render them */}
-      <SearchBar />
-      <Posts posts = {posts} likePost = {likePost} />
+      <SearchBar search = {e => setSearch(e.target.value)} />
+      <Posts posts = {filteredPost} likePost = {likePost} />
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
